@@ -1,9 +1,10 @@
-package Models;
+package com.example.zukii.Models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import org.antlr.v4.runtime.misc.NotNull;
 import org.springframework.lang.NonNull;
 
 @Entity
@@ -13,10 +14,10 @@ public class Mascota {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long MascotaId;
 
-    @NonNull
+
     public String Nombre;
 
-    @NonNull
+
     public String TipoMascota;
 
     public Mascota() {
@@ -32,12 +33,12 @@ public class Mascota {
         return MascotaId;
     }
 
-    @NonNull
+
     public String getNombre() {
         return Nombre;
     }
 
-    @NonNull
+
     public String getTipoMascota() {
         return TipoMascota;
     }
@@ -46,11 +47,11 @@ public class Mascota {
         MascotaId = mascotaId;
     }
 
-    public void setNombre(@NonNull String nombre) {
+    public void setNombre( String nombre) {
         Nombre = nombre;
     }
 
-    public void setTipoMascota(@NonNull String tipoMascota) {
+    public void setTipoMascota( String tipoMascota) {
         TipoMascota = tipoMascota;
     }
 }

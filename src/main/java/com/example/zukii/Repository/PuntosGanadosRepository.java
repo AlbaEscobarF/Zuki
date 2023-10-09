@@ -1,6 +1,6 @@
-package Repository;
+package com.example.zukii.Repository;
 
-import Models.PuntosGanados;
+import com.example.zukii.Models.PuntosGanados;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
