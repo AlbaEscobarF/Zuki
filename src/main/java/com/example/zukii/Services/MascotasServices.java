@@ -12,9 +12,9 @@ public interface MascotasServices {
 
         Mascota guardarMascota(Mascota mascotaNuevo);
 
-        void borrarMascota(String id);
+        void borrarMascota(Long id);
 
-        Mascota editarMascotaPorId(String id, Mascota nivelActualizado);
+        Mascota editarMascotaPorId(Long id, Mascota mascotaActualizado);
     }
 
 

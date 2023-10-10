@@ -25,6 +25,23 @@ public class TipoMascotaController {
         tipoMascotaservicesImpl.guardarTipoMascota(tipoMascota);
         return "Tipo de masccota Guardado";
     }
+    @GetMapping("/tipoMascota/{id}")
+    public TipoMascota buscarPorId (@PathVariable Long id){
+        TipoMascota mostrar = tipoMascotaservicesImpl.buscarTipoMascotaPorId(id);
+        return mostrar;
+    }
 
+    @DeleteMapping("/tipoMascota/{id}")
+    public String borrarPorId (@PathVariable Long id){
+        tipoMascotaservicesImpl.borrarTipoMascota(id);
+        return "El tipo de mascota ha sido borrrado";
+    }
+
+    @PutMapping("/tipoMisiones/{id}")
+    public TipoMascota editarPorId (@PathVariable Long id, @RequestBody TipoMascota actualizado) {
+        TipoMascota editado = tipoMascotaservicesImpl.editarTipoMascotaPorId(id, actualizado);
+        return editado;
+
+    }
 
 }

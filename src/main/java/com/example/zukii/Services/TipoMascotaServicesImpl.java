@@ -23,9 +23,9 @@ public class TipoMascotaServicesImpl implements TipoMascotaServices {
     public TipoMascota guardarTipoMascota (TipoMascota TipoMascotaNuevo){return tipoMascotaRepository.save(TipoMascotaNuevo);}
 
     @Override
-    public void borrarTipoMascota(String id){}
+    public void borrarTipoMascota(Long id){}
 
     @Override
-    public TipoMascota editarTipoMascotaPorId(String id, TipoMascota TipoMascotaActualizado){return null;}
+    public TipoMascota editarTipoMascotaPorId(Long id, TipoMascota TipoMascotaActualizado){return null;}
 
 }

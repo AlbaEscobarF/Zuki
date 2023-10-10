@@ -11,7 +11,7 @@ public interface TipoMascotaServices {
 
     TipoMascota guardarTipoMascota(TipoMascota TipoMascotaNuevo);
 
-    void borrarTipoMascota(String id);
+    void borrarTipoMascota(Long id);
 
-    TipoMascota editarTipoMascotaPorId(String id, TipoMascota TipoMascotaActualizado);
+    TipoMascota editarTipoMascotaPorId(Long id, TipoMascota TipoMascotaActualizado);
 }

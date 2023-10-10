@@ -28,12 +28,12 @@ public class MacotaServicesImpl implements MascotasServices{
     }
 
     @Override
-    public void borrarMascota(String id) {
+    public void borrarMascota(Long id) {
 
     }
 
     @Override
-    public Mascota editarMascotaPorId(String id, Mascota mascotaActualizado) {
+    public Mascota editarMascotaPorId(Long id, Mascota mascotaActualizado) {
         return null;
     }
 }
