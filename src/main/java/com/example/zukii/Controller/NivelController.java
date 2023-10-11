@@ -1,18 +1,21 @@
 package com.example.zukii.Controller;
 
 import com.example.zukii.Models.Mascota;
+import com.example.zukii.Models.Nivel;
+import com.example.zukii.Repository.NivelRepository;
 import com.example.zukii.ServicesImpl.MacotaServicesImpl;
+import com.example.zukii.ServicesImpl.NivelServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-@CrossOrigin("*")
-public class MascotaController {
+@Controller
+public class NivelController {
 
     @Autowired
-    private MacotaServicesImpl mascotaservicesImpl;
+    private NivelServiceImpl nivelServiceImpl;
 
     @GetMapping(value = "/tipomascota")
     public String TipoMascota() {
@@ -20,33 +23,33 @@ public class MascotaController {
     }
 
     @GetMapping("/tipoMisiones")
-    public List<Mascota> lista(){
-        List<Mascota> mostrar = mascotaservicesImpl.lista();
+    public List<Nivel> lista(){
+        List<Nivel> mostrar = nivelServiceImpl.lista();
         return mostrar;
     }
 
     @PostMapping(value = "/nuevotipomascota")
-    public String save(@RequestBody Mascota Mascota) {
-        mascotaservicesImpl.guardar(Mascota);
+    public String save(@RequestBody Nivel Nivel) {
+        nivelServiceImpl.guardar(Nivel);
         return "Tipo de masccota Guardado";
     }
 
 
     @GetMapping("/tipoMascota/{id}")
-    public Mascota buscarPorId(@PathVariable Long id) {
-        Mascota mostrar = mascotaservicesImpl.buscarPorId(id);
+    public Nivel buscarPorId(@PathVariable Long id) {
+        Nivel mostrar = nivelServiceImpl.buscarPorId(id);
         return mostrar;
     }
 
     @DeleteMapping("/tipoMascota/{id}")
     public String borrarPorId(@PathVariable Long id) {
-        mascotaservicesImpl.borrarPorId(id);
+        nivelServiceImpl.borrarPorId(id);
         return "El tipo de mascota ha sido borrrado";
     }
 
     @PutMapping("/tipoMisiones/{id}")
-    public Mascota editarPorId(@PathVariable Long id, @RequestBody Mascota actualizado) {
-        Mascota editado = mascotaservicesImpl.editarPorId(id, actualizado);
+    public Nivel editarPorId(@PathVariable Long id, @RequestBody Nivel actualizado) {
+        Nivel editado = nivelServiceImpl.editarPorId(id, actualizado);
         return editado;
 
     }

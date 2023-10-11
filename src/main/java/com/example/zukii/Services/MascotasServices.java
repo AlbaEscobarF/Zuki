@@ -6,15 +6,13 @@ import java.util.List;
 
 public interface MascotasServices {
 
-        List<Mascota> listaDeMascota();
+        List<Mascota> lista();
 
-        Mascota buscarMascotaPorId(Long id);
+        Mascota buscarPorId(Long id);
 
-        Mascota guardarMascota(Mascota mascotaNuevo);
+        Mascota guardar(Mascota nuevo);
 
-        void borrarMascota(Long id);
+        void borrarPorId(Long id);
 
-        Mascota editarMascotaPorId(Long id, Mascota mascotaActualizado);
-    }
-
-
+        Mascota editarPorId(Long id, Mascota actualizado);
+}

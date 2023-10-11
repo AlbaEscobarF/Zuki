@@ -5,13 +5,14 @@ import com.example.zukii.Models.PuntosGanados;
 import java.util.List;
 
 public interface PuntosGanadosServices {
-    List<PuntosGanados> listaDePuntosGanados();
 
-    PuntosGanados buscarPuntosGanadosPorId(Long id);
+    List<PuntosGanados> lista();
 
-    PuntosGanados guardarPuntosGanados(PuntosGanados PuntosGanadosNuevo);
+    PuntosGanados buscarPorId(Long id);
 
-    void borrarPuntosGanadosNuevo(Long id);
+    PuntosGanados guardar(PuntosGanados nuevo);
 
-    PuntosGanados editarPuntosGanados(Long id, PuntosGanados nivelActualizado);
+    void borrarPorId(Long id);
+
+    PuntosGanados editarPorId(Long id, PuntosGanados actualizado);
 }
